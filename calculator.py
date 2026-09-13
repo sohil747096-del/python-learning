@@ -22,3 +22,5 @@ elif choice == "4":
         print("Cannot divide by zero")
 else:
     print("Invalid choice")
+
+print("calculator project - version 2")
