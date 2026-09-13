@@ -1,26 +1,29 @@
+print("=== Simple Calculator ===")
+
 a = float(input("Enter first number: "))
 b = float(input("Enter second number: "))
 
-print("Choose an operation:")
-print("1. Addition")
-print("2. Subtraction")
-print("3. Multiplication")
-print("4. Division")
+print("\nChoose:")
+print("1. +")
+print("2. -")
+print("3. *")
+print("4. /")
 
-choice = input("Enter choice (1-4): ")
+choice = input("Enter choice: ")
 
 if choice == "1":
-    print("Result:", a + b)
+    result = a + b
 elif choice == "2":
-    print("Result:", a - b)
+    result = a - b
 elif choice == "3":
-    print("Result:", a * b)
+    result = a * b
 elif choice == "4":
-    if b != 0:
-        print("Result:", a / b)
-    else:
-        print("Cannot divide by zero")
+    if b == 0:
+        print("Cannot divide by zero.")
+        exit()
+    result = a / b
 else:
-    print("Invalid choice")
+    print("Invalid choice.")
+    exit()
 
-print("calculator project - version 2")
+print("Result:", result)
